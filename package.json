@@ -1,0 +1,41 @@
+{
+  "name": "module-name",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Jake Jarvis",
+    "email": "jake@jarv.is",
+    "url": "https://jarv.is/"
+  },
+  "repository": "jakejarvis/module-name",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "source": "./src/module-name.ts",
+  "main": "./dist/module-name.cjs",
+  "module": "./dist/module-name.esm.js",
+  "unpkg": "./dist/module-name.min.js",
+  "exports": {
+    "require": "./dist/module-name.cjs",
+    "import": "./dist/module-name.esm.js",
+    "browser": "./dist/module-name.min.js"
+  },
+  "types": "./dist/module-name.d.ts",
+  "scripts": {
+    "build": "microbundle --format cjs,esm,umd --name 'exportName'",
+    "test": "eslint . && echo \"Tests are important. ;)\"",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@jakejarvis/eslint-config": "*",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "microbundle": "^0.14.2",
+    "typescript": "^4.6.2"
+  },
+  "keywords": []
+}
